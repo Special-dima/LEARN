@@ -6,14 +6,14 @@ body{
 }
 
 header{
-    background-color: rgb(206, 255, 214);
+    background:linear-gradient(to right, rgb(206, 255, 214),red,rgb(18, 127, 43),rgb(40, 18, 161));
     color: black;
     padding: 10px;
     font-size: 16pt;   
 } 
 
 footer{
-    background-color: rgb(206, 255, 214);
+    background:linear-gradient(to left, rgb(206, 255, 214),red,rgb(18, 127, 43),rgb(40, 18, 161));
     color: black;
     padding: 10px;
     font-size: 12pt;
