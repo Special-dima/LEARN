@@ -19,3 +19,18 @@ footer{
     font-size: 12pt;
     text-align: right;
 } 
+
+a {
+
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color:rgb(255, 0, 179);
+    font-weight: bold;
+}
+a:active {
+    color: rgb(255, 60, 184);
+    background-color: yellowf;
+}
