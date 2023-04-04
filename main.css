@@ -12,6 +12,16 @@ header{
     font-size: 16pt;   
 } 
 
+header:hover{
+    font-size: 6pt;
+    color: rgb(2, 94, 3);
+}
+
+header:active{
+    font-size: 6pt;
+    color: rgb(43, 0, 255);
+}
+
 footer{
     background:linear-gradient(to left, rgb(206, 255, 214),red,rgb(18, 127, 43),rgb(40, 18, 161));
     color: black;
@@ -19,6 +29,16 @@ footer{
     font-size: 12pt;
     text-align: right;
 } 
+
+footer:hover{
+    font-size: 25pt;
+    color: rgb(177, 0, 3);
+}
+
+footer:active{
+    font-size: 6pt;
+    color: rgb(255, 0, 187);
+}
 
 a {
     text-decoration: none;
