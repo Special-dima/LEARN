@@ -47,12 +47,24 @@
                 let author = 'Дмитрий продакшн:\nПРЕДСТАВЛЯЕТ';
                 alert(author); 
             }
+            function chaOutput() {
+                let output = document.getElementById('output');
+                output.innerHTML = 'нажата кнопка 1';
+                output.style.backgroundColor = 'red';
+                output.style.color = 'yellow';
+            }
         </script>
         <style>
             .message {
                 border: 1px solid;
                 cursor: pointer;
                 display: inline-block;
+            }
+
+            #output {
+                border: 1px solid;
+                width: 300px;
+                height: 40px;
             }
         </style>
     </head>
@@ -66,10 +78,18 @@
             <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
             <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
             <div class="message" onclick="Sum()">Найти сумму:</div>
-            <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
             <div class="message" onclick="del()">Разделить:</div>
             <div class="message" onclick="umn()">Умножить:</div>
             <div class="message" onclick="min()">Найти разность:</div>
+            <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
+            <div>
+                <input type="button" value="кнопка 1" onclick="chaOutput(1, 'red', 'yellow')">
+                <input type="button" value="кнопка 2" onclick="chaOutput(1, 'red', 'yellow')>
+                <input type="button" value="кнопка 3" onclick="chaOutput(1, 'red', 'yellow')>
+                <input type="button" value="кнопка 4" onclick="chaOutput(1, 'red', 'yellow')>
+            </div>
+
+            <div id="output"></div>
         </main>
 
         <footer onclick="showAuthor()">
