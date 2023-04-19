@@ -13,6 +13,10 @@
                 let resulte = a + b;
                 alert('Сумма ' + a + ' и ' + b + ' равна ' + resulte);
             }
+            function showAuthor() {
+                let author = 'Дмитрий продакшн:\nПРЕДСТАВЛЯЕТ';
+                alert(author); 
+            }
         </script>
         <style>
             .message {
@@ -23,16 +27,16 @@
     </head>
 
     <body>
-        <header>
+        <header onclick="showAuthor()">
             НГТУ, ФБ, Лабораторная работа 5
         </header>
 
         <main>
             <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-            <div class="message">Узнать, кто автор страницы</div>
+            <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
         </main>
 
-        <footer>
+        <footer onclick="showAuthor()">
             &copy; Нехороших Дмитрий, ФБИ-14, 2 курс, 2023
         </footer>
     </body>
