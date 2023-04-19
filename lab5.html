@@ -7,10 +7,14 @@
         <title>Нехороших Дмитрий Алексеевич. Лабораторная 5</title>
         <link rel="stylesheet" href="main.css">
         <script>
-            let a = 5154;
-            let b = 7891;
-            let resulte = a + b;
-            alert(resulte);
+            function showSum () {
+                let a = 5645;
+                let b = 1274;
+                let resulte = a + b;
+                alert('Сумма ' + a + ' и ' + b + ' равна ' + resulte);
+            }
+
+            showSum();
         </script>
         <style>
             .message {
@@ -26,7 +30,7 @@
         </header>
 
         <main>
-            <div class="message">Сколько будет 5154+7891?</div>
+            <div class="message" onclick="showSum">Сколько будет 5154+7891?</div>
             <div class="message">Узнать, кто автор страницы</div>
         </main>
 
