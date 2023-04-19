@@ -22,6 +22,10 @@ header:active{
     color: rgb(43, 0, 255);
 }
 
+main {
+    margin: 10px 20px;
+}
+
 footer{
     background:linear-gradient(to left, rgb(206, 255, 214),red,rgb(18, 127, 43),rgb(40, 18, 161));
     color: black;
