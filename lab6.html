@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нехороших Дмитрий Алексеевич. Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+    <script>
+        let number;
+        function startGame() {
+            number = Math.floor(Math.random() * 100)+1;
+            let screens = document.getElementsByClassName('game');
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+        function guess() {
+            let input = document.getElementById('user-number');
+            let userNumber = parseInt(input.value);
+        }
+    </script>
 </head>
 
 <body>
@@ -15,22 +31,22 @@
 
     <main>
         <div class="game">
-            <button>
+            <button onclick="startGame()">
                 Сыграть в игру
             </button>
         </div>
 
-        <div class="game">
+        <div class="game" style="display: none;">
             <h1>Угадай число!</h1>
             <div>
                 Задуманно число от 1 до 100. Угадайте, какое?<br>
-                <input type="number" value="" min="1" max="100"><br>
-                <button>Угадать</button>
+                <input type="number" value="" min="1" max="100" id="user-number"><br>
+                <button onclick="guess">Угадать</button>
                 <div id="result"></div>
             </div>
         </div>
 
-        <div class="game">
+        <div class="game" style="display: none;">
             <h1>Поздравляем, вы выиграли!</h1>
             <div>
                 Задуманное число: <span id="number"></span>
