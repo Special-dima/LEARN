@@ -47,11 +47,27 @@
                 let author = 'Дмитрий продакшн:\nПРЕДСТАВЛЯЕТ';
                 alert(author); 
             }
-            function chaOutput() {
+            function chaOutput(buttonNum, backColor, textColor) {
                 let output = document.getElementById('output');
-                output.innerHTML = 'нажата кнопка 1';
-                output.style.backgroundColor = 'red';
-                output.style.color = 'yellow';
+                output.innerHTML ='нажата кнопка' + buttonNum;
+                output.style.backgroundColor = backColor;
+                output.style.color = textColor;
+            }
+            function kor() {
+                let inputJ = document.getElementById('nJ')
+                let inputU = document.getElementById('nU')
+                let inputL = document.getElementById('nL')
+                let inputI = document.getElementById('nI')
+
+                let j = parseInt(inputJ.value);
+                let u = parseInt(inputU.value);
+                let l = parseInt(inputL.value);
+                let i = parseInt(inputI.value);
+
+                let res = (j*1000)+(u*2000)+(l*500)+(i*800);
+                alert('Расчитать '+ res);
+                let output1 = document.getElementById('output1')
+                output1.innerHTML = 'ИТОГО к оплате: '+ res;
             }
         </script>
         <style>
@@ -65,6 +81,24 @@
                 border: 1px solid;
                 width: 300px;
                 height: 40px;
+            }
+            .pop {
+                border: 1px solid;
+                width: 60px;
+                height: 20px;
+                margin: 10px;
+            }
+            #output1{
+                font-size: 17pt;
+                color: deeppink;
+            }
+
+            .kor{
+                border: 1px solid;
+                border-radius: 20px;
+                width: 360px;
+                height: 260px;
+                padding: 10px;
             }
         </style>
     </head>
@@ -84,12 +118,22 @@
             <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
             <div>
                 <input type="button" value="кнопка 1" onclick="chaOutput(1, 'red', 'yellow')">
-                <input type="button" value="кнопка 2" onclick="chaOutput(1, 'red', 'yellow')>
-                <input type="button" value="кнопка 3" onclick="chaOutput(1, 'red', 'yellow')>
-                <input type="button" value="кнопка 4" onclick="chaOutput(1, 'red', 'yellow')>
+                <input type="button" value="кнопка 2" onclick="chaOutput(2, 'black', 'lime')">
+                <input type="button" value="кнопка 3" onclick="chaOutput(3, 'blue', 'red')">
+                <input type="button" value="кнопка 4" onclick="chaOutput(4, 'yellow', 'red')">
             </div>
 
             <div id="output"></div>
+
+            <div>
+                <div class="pop">Корзина</div>
+                <label> Шина(1000р\шт) <br><input type="number" value="0" id="nJ"></label><br>
+                <label> Диск(2000р\шт) <br><input type="number" value="0" id="nU"></label><br>
+                <label> Фара(500р\шт) <br><input type="number" value="0" id="nL"></label><br>
+                <label> Стойка(800р\шт) <br><input type="number" value="0" id="nI"></label><br>
+                <input type="button" value="Рассчитать" onclick="kor()" style="cursor: pointer;">
+                <div id="output1"></div>
+            </div>
         </main>
 
         <footer onclick="showAuthor()">
