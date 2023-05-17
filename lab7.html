@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нехороших Дмитрий Алексеевич. Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
+
+    <script>
+        function addBlocks() {
+            for(let i = 0; i < 10; i++) {
+                let block = document.createElement('div');
+                block.innerHTML = 'Блок №' + i+1;
+
+                let blocks = document.getElementById('blocks');
+                blocks.appendChild(block);
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -14,7 +26,8 @@
     </header>
 
     <main>
-
+        <button onclick="addBlocks()">Создать блоки</button>
+        <div id="blocks"></div>
     </main>
 
     <footer>
