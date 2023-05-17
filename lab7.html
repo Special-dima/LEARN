@@ -17,6 +17,19 @@
                 blocks.appendChild(block);
             }
         }
+
+        function showExchange() {
+            let exchange = [49.6231, 49.5620, 50.0796, 49.7057, 49.0170,
+                            49.1355, 49.8457, 50.6911, 50.3941, 50.8641];
+                            let table = document.getElementById('dollar-exchange');
+                            for(let i = 0; i < exchange.length; i++) {
+                                let tr = document.createElement('tr');
+                                let td = document.createElement('td');
+                                td.innerHTML = exchange[1];
+                                tr.appendChild(tr);
+                                table.appendChild(tr);
+                            }
+        }
     </script>
 </head>
 
@@ -28,6 +41,11 @@
     <main>
         <button onclick="addBlocks()">Создать блоки</button>
         <div id="blocks"></div>
+        
+        <div id="blocks"></div>
+
+        <button onclick="showExchange()">Курс доллора</button>
+        <table border="1" id="dollar-exchange"></table>
     </main>
 
     <footer>
