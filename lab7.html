@@ -48,6 +48,17 @@
                 blocks.appendChild(block);
             }
         }
+        function knop(pip) {
+            if( pip.style.backgroundColor == "red") {
+                pip.style.backgroundColor = "green";
+                document.getElementById('color-name').innerHTML = 'Зелёный';
+            }
+            else {
+                pip.style.backgroundColor = "red"
+                document.getElementById('color-name').innerHTML = 'Красный';
+            }
+        }
+
     </script>
 </head>
 
@@ -70,7 +81,8 @@
         <div id="transparent-blocks"></div>
 
         <div>
-            <input type="number" value="5" id="user">
+            <input type="number" value="5" id="user-number"><span id="pod"></span><br>
+            <button class="cvet" onclick="knop(this)" style="background-color: red;"><span id="color-name">Красный</button>
         </div>
     </main>
 
