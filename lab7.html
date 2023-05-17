@@ -44,7 +44,7 @@
                 let block = document.createElement('div');
                 block.innerHTML = 'Блок №' + (i+1) + ': ' + (2 * i**2);
                 block.style.opacity = i/10;
-                
+
                 blocks.appendChild(block);
             }
         }
@@ -68,6 +68,10 @@
 
         <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id="transparent-blocks"></div>
+
+        <div>
+            <input type="number" value="5" id="user">
+        </div>
     </main>
 
     <footer>
