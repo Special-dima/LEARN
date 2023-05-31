@@ -19,3 +19,10 @@ function sdc(){
     daysCount = Math.floor(daysCount);
     document.getElementById('rojd').innerHTML = "Количесвто дней с даты рождения: " + daysCount;
 }
+
+function st() {
+    let today = new Date();
+    let currentTime = today.toLocaleTimeString('ru-RU');
+    document.getElementById('time').innerHTML = currentTime;
+}
+setInterval(st, 1000);
