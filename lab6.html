@@ -112,7 +112,7 @@
             else if(userNumber > 100) {
                 message.innerHTML = 'Число должно быть в диапозоне от 1 до 100'
             }
-            
+
         }
         function again() {
             let screens = document.getElementsByClassName('game');
@@ -161,19 +161,20 @@
         function plase(smena) {
             if (smena.style.float == 'left'){
                 smena.style.float = 'right';
-                smena.style.transition = '1000ms 1s';
+                smena.style.transition = '300ms 0.5s';
                 if (smena.style.transform = 'rotate()') {
                     smena.style.transform = 'rotate(4turn)';
                 }
             }
             else {
                 smena.style.float = 'left';
-                smena.style.transition = '10000ms 1s';
+                smena.style.transition = '300ms 0.5s';
             if (smena.style.transform = 'rotate(4turn)') {
                 smena.style.transform = 'rotate()'
                 }
             }
-        }    
+        }  
+          
         function block(k) {
             if (parseInt(k.style.width)<=1000) {
                 k.style.width = parseInt(k.style.width) +50 + 'px';        
@@ -188,47 +189,47 @@
             let wear = document.getElementById('wear');
 
             if (color == 'красный' && type == 'Футболка') {
-                wear.src = 
+                wear.src = 'red footbolka.jpg'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
             else if (color == 'красный' && type == 'Поло') {
-                wear.src = 
+                wear.src = 'red polo.png'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
             else if (color == 'красный' && type == 'Майка') {
-                wear.src = 
+                wear.src = 'red maika.jpg'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
             else if (color == 'белый' && type == 'Футблолка') {
-                wear.src = 
+                wear.src = 'white footbolka.jpg'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
             else if (color == 'белый' && type == 'Поло') {
-                wear.src = 
+                wear.src = 'white polo.jpg'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
             else if (color == 'белый' && type == 'Майка') {
-                wear.src = 
+                wear.src = 'white maika.jpg'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
             else if (color == 'черный' && type == 'Футболка') {
-                wear.src = 
+                wear.src = 'black footbolka.jpg'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
             else if (color == 'черный' && type == 'Поло') {
-                wear.src = 
+                wear.src = 'black polo.jpg'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
             else if (color == 'черный' && type == 'Майка') {
-                wear.src = 
+                wear.src = 'black maika.jpg'
                 wear.style.width = '30%'
                 wear.style.height = '30%'
             }
@@ -297,9 +298,9 @@
         <div class="filter">
             Цвет одежды:
             <select id="wear-color">
-                <option>Красный</option>
-                <option>Белый</option>
-                <option>Чёрный</option>
+                <option>красный</option>
+                <option>белый</option>
+                <option>чёрный</option>
             </select><br>
 
             Тип одеждый:
