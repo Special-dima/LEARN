@@ -7,7 +7,75 @@
     <title>Нехороших Дмитрий Алексеевич. Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">
     <style>
+        .footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
 
+        .game{
+            border-radius: 30px;
+            border: darksalmon;
+            padding: 2%;
+            margin-left: 33%;
+            margin-right: 33%;
+            margin-bottom: 3%;
+            text-align: center;
+            color: red;
+            cursor: pointer;
+        }
+        .pr{
+            border-radius: 30px;
+            border: dashed blue;
+            padding: 2%;
+            margin-left: 33%;
+            margin-right: 33%;
+        }
+        .bl{
+            border-radius: 30px;
+            border: solid blue;
+            background-color: aqua;
+            padding: 2%;
+            margin-left: 33%;
+            margin-right: 33%;
+            margin-bottom: 3%;
+            text-align: center;
+            color: red;
+            position: relative;
+            cursor: pointer;
+        }
+        .dv{
+            width: 150px;
+            height: 100px;
+            float: left;
+            background-color: rgb(12, 228, 98);
+            color: aqua;
+            border: solid wheat;
+            border-radius: 30px;
+            vertical-align: middle;
+            line-height: 90px;
+            position: relative;
+            text-align: center;
+            top: 5px;
+            cursor: pointer;
+            transform: rotate();
+        }
+        .r{
+            width: 100px;
+            height: 50px;
+            background-color: blueviolet;
+            border: solid yellow;
+            border-radius: 30px;
+            position: relative;
+            cursor: pointer;
+            top: 130px;
+        }
+        .fil{
+            margin-top: 200px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
     </style>
     <script>
         let number;
@@ -23,6 +91,7 @@
             let input = document.getElementById('user-number');
             let userNumber = parseInt(input.value);
             let message = document.getElementById('result');
+            let m=document.getElementById('UN')
             if(userNumber > number) {
                 message.innerHTML='Вы ввели слишком большое число';
             } 
@@ -33,6 +102,7 @@
                 let screens=document.getElementsByClassName('game');
                 screens[1].style.display='none';
                 screens[2].style.display='block';
+                document.getElementById('user-number').value="0";
                 document.getElementById('number').innerHTML=number;
                 document.getElementById('try-count').innerHTML=count;
             }
@@ -42,6 +112,7 @@
             else if(userNumber > 100) {
                 message.innerHTML = 'Число должно быть в диапозоне от 1 до 100'
             }
+            
         }
         function again() {
             let screens = document.getElementsByClassName('game');
