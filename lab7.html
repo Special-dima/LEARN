@@ -38,14 +38,15 @@
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average; 
         }
 
-        function addTransparentBlocks() {
+        function atb() {
             let blocks = document.getElementById('blocks');
             for(let i = 0; i < 10; i++) {
-                let block = document.createElement('div');
-                block.innerHTML = 'Блок №' + (i+1) + ': ' + (2 * i**2);
-                block.style.opacity = i/10;
-
-                blocks.appendChild(block);
+                let box = document.createElement('div');
+                box.style.width = '50px';
+                box.style.height = '50px';
+                box.style.backgroundColor = 'red';
+                box.style.opacity = i/10;
+                colors.appendChild(box);
             }
         }
         function knop(pip) {
@@ -77,7 +78,7 @@
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
 
-        <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
+        <button onclick="atb()">Создать полупрозрачные блоки</button>
         <div id="transparent-blocks"></div>
 
         <div>
