@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нехороших Дмитрий Алексеевич. РГЗ</title>
+    <link rel="stylesheet" href="r.css">
+    <style>
+        .logo {
+        height: 70px;
+        width: 150px;
+        margin-left: 0;
+        float: left;
+        }
+    </style>
+
+    </head>
+    <body>
+        <menu>
+        <img src="https://rus-petroleum.ru/uploads/posts/2018-08/1534108983_tovarnyj-znak-format-jpeg.jpg" class="logo">
+        <a href="r1.html">О компании</a><a href="r2.html" style="color: rgb(158, 123, 83);">Основные финансовые показатели</a>
+        <a href="r3.html">Контактные данные</a><a href="r4.html">Видео</a>
+        </menu>
+
+        <main>
+        <h1>Основные финансовые показатели</h1>
+        <p>
+        <b>Капитализация на 31.04.2023:</b> 900 830 956 486,575 рублей
+        </p>
+        <p>
+        <b>Общее число акций, обращающихся на Московской бирже:</b> 3 854 341 416 571 +3/7
+        </p>
+        <h2>Таблица с ценами закрытия за весь апрель</h2>
+        <table border="2" id="table"></table>
+        <div id="min" style="color: brown; font-weight: bolder;"></div>
+        <div id="max" style="color: brown; font-weight: bolder;"></div>
+        <div id="otklonenie"style="color: brown; font-weight: bolder;" ></div>
+    <script>
+        let data = ['3-04-2023', '4-04-2023', '5-04-2023', '6-04-2023', '7-04-2023',
+        '10-04-2023', '11-04-2023', '12-04-2023', '13-04-2023', '14-04-2023',
+        '17-04-2023', '18-04-2023', '19-04-2023', '20-04-2023', '21-04-2023',
+        '24-04-2023', '25-04-2023', '26-04-2023', '27-04-2023', '28-04-2023'];
+        let kurs = [24.055,24.84,25.055,24.99,24.965,25.185,24.68,24.8,24.73,24.635,25.13,
+        25.125,24.935,25.27,26.325,26.015,25.53,25.165,25.51,25.085];
+        let table = document.getElementById('table');
+        for(let i = 0; i < data.length; i++){
+        let tr = document.createElement('tr');
+        let tdData = document.createElement('td');
+        tdData.innerHTML = data[i];
+        tr.appendChild(tdData);
+        let tdKurs = document.createElement('td');
+        tdKurs.innerHTML = kurs[i];
+        tr.appendChild(tdKurs);
+        table.appendChild(tr);
+        }
+        let min = Math.min(...kurs);
+        document.getElementById('min').innerHTML = 'Минимальное значение: ' + min;
+        let max = Math.max(...kurs);
+        document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+        let sum = 0;
+        for (let i = 0; i < kurs.length; i++) {
+        sum += kurs[i];
+        }
+        let avg = sum / kurs.length;
+        let variance = 0;
+        for (let i = 0; i < kurs.length; i++) {
+        variance += Math.pow(kurs[i] - avg, 2);
+        }
+        let otklonenie = Math.sqrt(variance / kurs.length);
+        document.getElementById('otklonenie').innerHTML = 'Среднеквадратическое отклонение: ' + otklonenie;
+    </script>
+    </main>
+    </body>
+        </html>
