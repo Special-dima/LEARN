@@ -39,14 +39,14 @@
         }
 
         function atb() {
-            let blocks = document.getElementById('blocks');
+            let blocks = document.getElementById('trbl');
             for(let i = 0; i < 10; i++) {
                 let box = document.createElement('div');
                 box.style.width = '50px';
                 box.style.height = '50px';
                 box.style.backgroundColor = 'red';
                 box.style.opacity = i/10;
-                colors.appendChild(box);
+                blocks.appendChild(box);
             }
         }
         function createCircles() {
