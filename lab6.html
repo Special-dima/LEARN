@@ -14,6 +14,13 @@
             width: 100%;
         }
 
+        .yellow{
+            width: 200px;
+            margin: auto;
+            position: relative;
+            right: 400px;
+        }
+
         .game{
             border-radius: 30px;
             border: darksalmon;
@@ -75,6 +82,17 @@
             margin-top: 200px;
             text-align: center;
             margin-bottom: 50px;
+        }
+
+        .c{
+            margin-top: 150px;
+            position: relative;
+            left: 0px;
+        }
+        
+        .filter{
+            margin-top: 200px;
+            text-align: center;
         }
     </style>
     <script>
@@ -284,12 +302,12 @@
             <li>Введите число</li>
             <li>ПРоанализируйте ответ</li>
             <li>Попробуйте ввести новое число</li>
-            <li>убедитесь, что вводите правильный диапазон</li>
+            <li>Убедитесь, что вводите правильный диапазон</li>
             </ol>
         </div>
 
         <div class="yellow" ondblclick="changeColor(this)">
-            Цвет:
+            Цвет:<span id="color-name">жёлтый</span><br>
             Сделайте двойной щелчёк, чтобы сменить.
         </div>
         <div class="c" onclick="plase(this)">
